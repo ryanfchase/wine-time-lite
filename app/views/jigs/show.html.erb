@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @jig.name %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @jig.body %>
+</p>
+
+<%= link_to 'Edit', edit_jig_path(@jig) %> |
+<%= link_to 'Back', jigs_path %>
