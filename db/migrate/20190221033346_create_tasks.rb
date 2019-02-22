@@ -1,12 +1,9 @@
 class CreateTasks < ActiveRecord::Migration[5.1]
   def change
     create_table :tasks do |t|
-      t.string :category
-      t.datetime :starts_time
-      t.datetime :ends_time
+      t.string :category, index: true
+      t.datetime :starts_time, index: true
+      t.datetime :ends_time, index: true
     end
-    add_index :tasks, :category
-    add_index :tasks, :starts_time
-    add_index :tasks, :ends_time
   end
 end
