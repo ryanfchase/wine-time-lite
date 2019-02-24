@@ -5,6 +5,7 @@ module Types
     field :query, QueryType, null: false, method: :itself
 
     field :all_jigs, [JigType], null: true, description: "All jigs"
+    field :all_tasks, [TaskType], null: true, description: "All tasks"
 
     def test_field
       "Hello World!"
@@ -16,6 +17,10 @@ module Types
 
     def all_jigs
       Jig.all
+    end
+
+    def all_tasks
+      Task.all
     end
   end
 end
